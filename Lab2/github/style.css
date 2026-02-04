@@ -12,7 +12,7 @@ body {
     padding: 56px 24px 80px;
     text-align: center;
 }
-.hero {
+.hd {
     margin-bottom: 24px;
 }
 h1.title {
@@ -86,14 +86,14 @@ h1.title {
     top: -0.2em;
     padding: 0 5px;
 }
-.button a{
+.btn a{
     text-decoration: none;
     display: block;
   width: 100%;
   box-sizing: border-box;
   text-align: center;
 }
-.button {
+.btn {
     display: flex;
     gap: 12px;
     align-items: center;
@@ -128,7 +128,7 @@ h1.title {
 details { 
     border: 0; 
 }
-.details-list {
+.details_list {
     text-align: left;
     border-top: 1px solid #e5e7eb;
     padding-top: 14px;
@@ -159,7 +159,7 @@ details[open] summary::before {
     transform: rotate(90deg);
 }
 
-.detail-body {
+.detail_body {
     color: #57606a;
     padding: 6px 0 4px 20px;
     line-height: 1.5;
