@@ -1,0 +1,40 @@
+<div class="products-grid">
+  @for (product of products; track product.id) {
+    <div class="product-card">
+      <img [src]="getMainImage(product)" [alt]="product.name" class="product-image">
+      <div class="thumbnails">
+  @for (img of product.images; track img) {
+    <img
+      [src]="img"
+      [alt]="product.name"
+      class="thumbnail"
+      (click)="setMainImage(product.id, img)"
+    >
+  }
+</div>
+      <h2>{{ product.name }}</h2>
+
+      <p class="description">{{ product.description }}</p>
+
+      <p class="price">{{ product.price }} ₸</p>
+
+      <p class="rating">
+        {{ getStars(product.rating) }} ({{ product.rating }})
+      </p>
+
+      <div class="buttons">
+        <a [href]="product.link" target="_blank" class="btn details-btn">
+          Open in Kaspi
+        </a>
+
+        <button type="button" (click)="shareOnWhatsApp(product)" class="btn whatsapp-btn">
+          WhatsApp
+        </button>
+
+        <button type="button" (click)="shareOnTelegram(product)" class="btn telegram-btn">
+          Telegram
+        </button>
+      </div>
+    </div>
+  }
+</div>
